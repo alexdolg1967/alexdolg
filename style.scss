@@ -78,10 +78,30 @@ body {
 	}
 }
 
-section .container {
-	display: flex;
-	flex-direction: column;
-	gap: 25px;
+.works {
+	&-container {
+	}
+
+	&-list {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+
+		@media (min-width: 1024px) {
+			flex-direction: row;
+		}
+
+		&__left,
+		&__right {
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+
+			@media (min-width: 1024px) {
+				flex: 0 1 50%;
+			}
+		}
+	}
 }
 
 .block {
